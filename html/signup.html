@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html class="login-bg">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Vegas Backoffice Demo - Sign up</title>
+	<link rel='stylesheet' type="text/css" href='css/bootstrap/bootstrap.min.css' />
+	<link rel='stylesheet' type="text/css" href='css/bootstrap/bootstrap-overrides.css' />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/elements.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/signup.css" media="screen" />
+</head>
+<body>
+	<div class="header">
+		<a href="index.html">
+			<img src="css/images/vegas_logo.png" class="logo" />
+		</a>
+	</div>
+	<div class="login-wrapper">
+		<div class="box">
+			<div class="content-wrap">
+				<h6>Sign Up</h6>
+				<input id="email" class="form-control" type="text" placeholder="E-mail address" required />
+				<input id="password" class="form-control" type="password" placeholder="Password" required />
+				<input id="confirm" class="form-control" type="password" placeholder="Confirm Password" required />
+				<span class="error-star"></span>
+				<div class="action">
+					<a class="btn-glow primary signup">Sign up</a>
+				</div>
+			</div>
+		</div>
+
+		<div class="already">
+			<p>Already have an account?</p>
+			<a href="index.html">Sign in</a>
+		</div>
+	</div>
+	
+	<!--  External Library -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<!-- Internal Library -->
+	
+	<!-- Custom JavaScript -->
+	<script type="text/javascript" src="js/vegas/utils/common.js"></script>
+	<script type="text/javascript" src="js/vegas/listener/base.listener.js"></script>
+	<script type="text/javascript" src="js/vegas/backoffice/UserController.js"></script>
+	
+	<script type="text/javascript">
+		//Hidden code
+		<!--
+		$.ajaxSetup( {
+			cache: false,
+			data: null
+		});
+		
+		$(function() {
+			var user = new UserController();
+			user.initSignUp();
+		});
+		-->
+	</script>
+</body>
+</html>

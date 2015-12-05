@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Vegas Backoffice Demo</title>
+	<link rel='stylesheet' type="text/css" href='../css/bootstrap/bootstrap.min.css' />
+	<link rel='stylesheet' type="text/css" href='../css/bootstrap/bootstrap-overrides.css' />
+	<link rel='stylesheet' type="text/css" href='../css/vegas.css' />
+</head>
+
+<body>
+	<!-- Navigation contains Text/Logo, navigation menu, user -->
+	<header class="navbar navbar-inverse vegas-navbar">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="index.html"><img src="../css/images/vegas_logo.png"></a>
+		</div>
+		<div class="second-container item-left-80">
+			<div id="nav">
+				<ul class="tabs" id="menu">
+					<li class="active" id="events"><a href="#">Events</a></li>
+					<li id="venues"><a href="#">Venues</a></li>
+				</ul>
+			</div>
+		</div>
+		<ul class="nav navbar-nav pull-right hidden-xs">
+			<li class="dropdown">
+				<a href="#" class="dropdown-toggle hidden-xs hidden-sm" data-toggle="dropdown">Pao IM<b class="caret"></b></a>
+				<ul class="dropdown-menu">
+					<li><a href="#">Account settings</a></li>
+					<li><a href="#">LOGOUT</a></li>
+				</ul>
+			</li>
+		</ul>
+	</header>
+
+	<!-- Place holder for navigator bar menu click to load and store for different html file -->
+	<div id="homeContainer" class="item-left">
+		<!-- Load by JS -->
+	</div>
+	
+	
+	<!--  External Library -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	
+	<!-- Internal Library -->
+	<script type="text/javascript" src="../js/libs/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/libs/jquery-gmaps-latlon-picker.js"></script>
+	<script type="text/javascript" src="../js/libs/jquery.tmpl.min.js"></script>
+	
+	<!-- Custom JavaScript -->
+	<script type="text/javascript" src="../js/vegas/utils/common.js"></script>
+	<script type="text/javascript" src="../js/vegas/utils/GAEImageUploader.js"></script>
+	<script type="text/javascript" src="../js/vegas/listener/base.listener.js"></script>
+	<script type="text/javascript" src="../js/vegas/listener/template.listener.js"></script>
+	
+	<script type="text/javascript" src="../js/vegas/api/BaseJSNetwork.js"></script>
+	<script type="text/javascript" src="../js/vegas/api/EventImpl.js"></script>
+	<script type="text/javascript" src="../js/vegas/api/VenueImpl.js"></script>
+
+	<script type="text/javascript" src="../js/vegas/services/AbstractService.js"></script>
+	<script type="text/javascript" src="../js/vegas/services/EventService.js"></script>
+	<script type="text/javascript" src="../js/vegas/services/VenueService.js"></script>
+	
+	<script type="text/javascript" src="../js/vegas/backoffice/HomeController.js"></script>
+	<script type="text/javascript" src="../js/vegas/backoffice/EventController.js"></script>
+	
+	<script type="text/javascript" src="../js/vegas/backoffice/EventMenuController.js"></script>
+	<script type="text/javascript" src="../js/vegas/backoffice/EventDetailController.js"></script>
+	<script type="text/javascript" src="../js/vegas/backoffice/EventVirtualBoxController.js"></script>
+	<script type="text/javascript" src="../js/vegas/backoffice/EventTicketTypeController.js"></script>
+	<script type="text/javascript" src="../js/vegas/backoffice/EventSalePeriodAController.js"></script>
+	<script type="text/javascript" src="../js/vegas/backoffice/EventSalePeriodBController.js"></script>
+	
+	<script type="text/javascript" src="../js/vegas/backoffice/VenueController.js"></script>
+	<script type="text/javascript" src="../js/vegas/backoffice/VenueDetailController.js"></script>
+	
+	<!-- Templates scripts-->
+	<section id="templates"></section>
+
+	<script type="text/javascript">
+		<!--
+		$.ajaxSetup( {
+			cache: false,
+			data: null
+		});
+		
+		//load templates
+		$("#templates").load("template.html");
+		
+		$(function() {
+			var home = new HomeController();
+			home.init();
+		});
+		-->
+	</script>
+</body>
+</html>

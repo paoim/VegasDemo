@@ -1,0 +1,135 @@
+<div id="venuesContainer">
+	<div class="first-container">
+		<span>&nbsp;</span>
+	</div>
+	
+	<div class="second-container item-left-80">
+		<div id="boxContainer" class="simple-box">
+			<div class="event-tab-detail">
+				<div class="event-detail-item">
+					<label for="venue_name">VENUE NAME</label>
+					<input type="text" id="venue_name" name="venue_name" />
+				</div>
+				
+				<div class="event-detail-item">
+					<label for="venue_description">EVENT DESCRIPTION</label>
+					<textarea id="venue_description">DRAGONE the creator of "O" has redefined the traditional experience with Le Reve</textarea>
+				</div>
+				
+				<div class="event-detail-item">
+					<label for="venue_openingHours">HOURS OF OPERATIONS</label>
+					<input type="text" id="venue_openingHours" name="venue_openingHours" />
+				</div>
+				
+				<div class="event-detail-item">
+					<label for="venue_address">ADDRESS</label>
+					<div id="venue_address" class="simple-box event-detail-box">
+						<div class="venue-address-left">
+							<div class="item-left event-detail-padding">
+								<label for="venue_street">STREET</label>
+								<input type="text" name="venue_street" id="venue_street" />
+							</div>
+							
+							<div class="item-left event-detail-padding">
+								<label for="venue_city">CITY</label>
+								<input type="text" name="venue_city" id="venue_city" />
+							</div>
+							
+							<div class="item-left event-detail-padding">
+								<label for="venue_postalCode">POSTAL CODE</label>
+								<input type="text" name="venue_postalCode" id="venue_postalCode" />
+							</div>
+							
+							<div class="item-left event-detail-padding">
+								<label for="venue_cityArea">CITY AREA</label>
+								<input type="text" name="venue_cityArea" id="venue_cityArea" />
+							</div>
+							
+						</div>
+						
+						<div class="venue-address-right">
+							<div class="item-left event-detail-padding">
+								<label for="venue_coordinateLatitude">LOCATION LATITUDE</label>
+								<input type="text" name="venue_coordinateLatitude" id="venue_coordinateLatitude" />
+							</div>
+							
+							<div class="item-left event-detail-padding">
+								<label for="venue_coordinateLongitude">LOCATION LONGITUDE</label>
+								<input type="text" name="venue_coordinateLongitude" id="venue_coordinateLongitude" />
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+				
+				<div class="event-detail-item">
+					<label for="venue_phoneNumber">PHONE NUMBER</label>
+					<input type="text" id="venue_phoneNumber" name="venue_phoneNumber" />
+				</div>
+				
+				<div class="event-detail-item">
+					<label for="venue_email">EMAIL</label>
+					<input type="text" id="venue_email" name="venue_email" />
+				</div>
+				
+				<div class="event-detail-item">
+					<label for="venue_webUrl">WEB</label>
+					<input type="text" id="venue_webUrl" name="venue_webUrl" />
+				</div>
+				
+				<div class="event-detail-item">
+					<div class="venue-image-left">
+						<div><strong>VENUE LOGO</strong></div>
+						<div id="venue_logo" class="image-box-dashe">
+							<div id="previewLogo" class="preview-content">
+								Image Preview <br/>
+								choose a file
+								<div class="loading image"></div>
+							</div>
+						</div>
+						<input type="hidden" id="logoUrl" value=""/>
+						<input type="file" id="uploadLogo" style="visibility:hidden;"/>
+						<div class="recommended-image">Image size x by y pixels</div>
+					</div>
+					
+					<div class="venue-image-right">
+						<div><strong>VENUE PHOTO</strong></div>
+						<div id="venue_photo" class="image-box-dashe venue-image-box">
+							<div id="previewPhoto" class="preview-content">
+								Image Preview <br/>
+								choose a file
+								<div class="loading image"></div>
+							</div>
+						</div>
+						<input type="hidden" id="photoUrl" value=""/>
+						<input type="file" id="uploadPhoto" style="visibility:hidden;"/>
+						<div class="recommended-image">Image size x by y pixels</div>
+					</div>
+					
+				</div>
+				
+				<div class="event-detail-item">
+					<div class="button-align-right">
+						<button class="btn btn-warning" id="venueCancel">Cancel</button>
+						<button class="btn btn-warning" id="venueSavePublish">Save &amp; Publish</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	
+	<script type="text/javascript">
+		$(function() {
+			var venueDetail = new VenueDetailController();
+			venueDetail.init();
+			
+		});
+		
+	</script>
+	
+</div>

@@ -1,0 +1,184 @@
+<div id="eventListContainer">
+	<div id="pageHeader">
+		<div class="list-top-container item-left item-line-bottom">
+			<div class="first-container">
+				<span>&nbsp;</span><!-- &nbsp; is space -->
+			</div>
+			
+			<div class="second-container item-left-80 event-list-top-padding">
+				<div class="item-left-80">
+					<input type="text" id="event_name" name="event_name" class="form-control search-event" placeholder="Event name" />
+					<button class="btn btn-warning" id="eventSearch">Search</button>
+				</div>
+				<div class="button-align-right">
+					<button class="btn btn-warning" id="createNewEvent">Create New Event</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="item-left item-line-bottom event-filter">
+			<div class="first-container">
+				<span>&nbsp;</span>
+			</div>
+			
+			<div class="second-container item-left-80 event-list-top-padding">
+				<div class="item-left-30 event-filter-left">
+					<span id="resultEventFound">477 Events Found</span>
+				</div>
+				<div class="item-right-70">
+					<div class="event-filter-right button-align-right">
+						<span>FILTER BY</span>
+						<select id="event_filter" class="form-control">
+							<option value="-">Current events</option>
+						</select>
+						
+						<span>SORT BY</span>
+						<select id="event_sortBy" class="form-control">
+							<option value="-">Alphabetically</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="item-left">
+			<div class="venue-list-top-line-bottom">
+				<div class="first-container event-result">
+					<span>&nbsp;</span>
+				</div>
+				
+				<div class="second-container item-left-80 event-list-top-padding">
+					<div class="event-result-name">
+						<span>NAME</span>
+					</div>
+					
+					<div class="event-result-other">
+						<span>SOLD</span>
+					</div>
+					
+					<div class="event-result-other">
+						<span>TODAY</span>
+					</div>
+					
+					<div class="event-result-other">
+						<span>REMAINING</span>
+					</div>
+					
+					<div class="event-result-other">
+						<span>FEATURED</span>
+					</div>
+					
+					<div class="event-result-active">
+						<span>ACTIVE DEAL</span>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div id="pageBody">
+		<div class="first-container">
+			<span>&nbsp;</span>
+		</div>
+		
+		<div class="second-container item-left-80">
+			<div id="eventListItems" class="popup-item">
+				<!-- [List selector] -->
+				
+			</div>
+		</div>
+		
+	</div>
+	
+	<div id="pageFooter">
+		<div id="eventPagination" class="event-detail-item">
+			<ul class="pagination button-align-right">
+				<li><a href="#">&laquo; Previous</a></li>
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li><a href="#">4</a></li>
+				<li><a href="#">5</a></li>
+				<li><a href="#">Next &raquo;</a></li>
+			</ul>
+		</div>
+		
+		<!-- Create New Event (Popup) 
+		<div id="createNewEventDialog" class="modal hide fade model-width-650">
+				<div class="modal-header">
+					<h3 id="myModalLabel">#100x Create New Event</h3>
+				</div>
+				<div class="modal-body">
+					
+					<div class="popup-box">
+						<div id="popupTop" class="popup-top">
+							<div class="popup-title">
+								<strong>New Event</strong>
+								<button type="button" class="close" data-dismiss="modal">x</button>
+							</div>
+						</div>
+						
+						<div id="popupContent" class="item-left item-padding-left-10 item-padding-bottom-25">
+							<div class="popup-item item-padding-bottom-15">
+								<div class="item-float-left popup-input">
+									<label for="event_title">EVENT TITLE</label>
+									<input type="text" id="event_title" name="event_title" />
+								</div>
+								<div class="featured-event">
+									<input type="checkbox" id="event_featured" name="event_featured" />
+									<label for="event_featured">Featured event</label>
+								</div>
+							</div>
+							
+							<div class="popup-item">
+								<div class="popup-custom-box">
+									<div class="simple-box-title simple-box-event">
+										<span>EVENT TYPE</span>
+									</div>
+									
+									<div class="popup-custom-box-content item-padding-left-10">
+										
+										<div class="item-left popup-event-type-item">
+											<input type="radio" name="event_types" id="event_resident" value="0" />
+											<label for="event_resident">Resident Event</label>
+										</div>
+										
+										<div class="item-left popup-event-type-item">
+											<input type="radio" name="event_types" id="event_limited" value="1" />
+											<label for="event_limited">Limited engagement event</label>
+										</div>
+										
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<div id="popupBottom" class="item-left container-line-top">
+							<div class="button-align-center item-margin-top-8">
+								<button class="simple-button" id="createEventCancel">Cancel</button>
+								<button class="simple-button" id="createEventSave">Create</button>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div>
+		-->
+	</div>
+	
+	
+	<script type="text/javascript">
+		$(function() {
+			var event = new EventController();
+			event.init();
+			//event.get();
+		});
+		
+	</script>
+	
+</div>

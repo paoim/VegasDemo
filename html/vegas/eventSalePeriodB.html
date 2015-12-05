@@ -1,0 +1,106 @@
+<div id="eventSalePeriodsContainer">
+	<div id="salePeriodTop" class="event-tab-detail">
+		<div class="event-detail-item">
+			<div>
+				<span class="event-detail-title">Virtual BoxOffice</span>
+			</div>
+			<div>
+				<span class="event-detail-subtitle">Event Dates (Limited Engagement Event)</span>
+			</div>
+		</div>
+		
+		<div class="event-detail-item">
+			<div class="button-align-right">
+				<button class="btn btn-warning" id="salePeriodEventDate">Event Date</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="salePeriodMiddle">
+		<div class="sale-period-line-top">
+			[Sale Period Calendar]
+		</div>
+		
+	</div>
+	
+	<div id="salePeriodBottom" class="sale-period-line-top">
+		<div class="event-tab-detail">
+			<div class="event-detail-item">
+				<div class="item-float-left sale-period-img">
+					<label for="salePeriod_eventDate">EVENT DATE</label>
+					<input type="text" id="guiStartDate" name="guiStartDate" placeholder="MMM DD, YYYY"/>
+					<input id="salePeriod_eventDate" type="hidden" value="" />
+				</div>
+				
+			</div>
+			
+			<div class="event-detail-item">
+				<label for="salePeriod_times">TIMES</label>
+				<div id="salePeriod_times" class="simple-box sale-period-box">
+					<div class="sale-period-padding">
+						<div id="salePeriodLimited_timesTitle">
+							<div class="sale-period-time"><span>EVENT BEGINS</span></div>
+							<div class="sale-period-time"><span>DOORS OPEN</span></div>
+							<div class="sale-period-end-selling"><span>END SELLING TIME</span></div>
+							<div class="sale-period-delete"><span></span></div>
+						</div>
+						
+						<div id="salePeriodLimited_timesItem">
+							<!-- Load by JS -->
+						</div>
+					</div>
+					<div class="item-float-left sale-period-padding">
+						<button class="btn btn-warning" id="salePeriodLimitedEventTime">Event Time</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="event-detail-item">
+				<label for="salePeriod_ticket">ASSIGNED TICKET TYPES</label>
+				<div id="salePeriod_ticket" class="simple-box sale-period-box">
+					<div class="sale-period-padding">
+						<div id="salePeriodLimited_ticketTypeTitle">
+							<div class="item-left-80"><span>TICKET TYPE</span></div>
+							<div class="sale-period-delete"><span></span></div>
+						</div>
+						
+						<div id="salePeriodLimited_ticketTypeItem">
+							<!-- Load by JS -->
+						</div>
+					</div>
+					<div class="item-float-left sale-period-padding">
+						<button class="btn btn-warning" id="salePeriodLimitedTicketType">Ticket Type</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="event-detail-item">
+				<div class="button-align-right">
+					<button class="btn btn-warning" id="salePeriodLimitedDelete">Delete</button>
+					<button class="btn btn-warning" id="salePeriodLimitedCancel">Cancel</button>
+					<button class="btn btn-warning" id="salePeriodLimitedSavePublish">Save &amp; Publish</button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+		$(function() {
+// 			$( "#guiStartDate" ).datepicker({
+// 				altField: "#salePeriod_eventDate",
+// 				altFormat: "@",
+// 				dateFormat: "MM dd, yy",
+// 				showOn: "button",
+// 				buttonImage: "/css/images/calendar.gif",
+// 				buttonImageOnly: true
+// 			});
+			
+			var eventSalePeriodB = new EventSalePeriodBController();
+			eventSalePeriodB.init();
+			
+		});
+		
+	</script>
+</div>

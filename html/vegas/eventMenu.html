@@ -1,0 +1,478 @@
+<div id="eventsContainer">
+
+	<div id="pageHeader" class="item-left">
+		
+		<div class="first-container">
+			<span>&nbsp;</span>
+		</div>
+		<div class="second-container item-left-80">
+			<div id="bannerContainer" class="item-padding-bottom-15">
+				<div class="item-left event-title-padding">
+					<span id="eventHeaderTitle">Le Reve The Dream Theater</span>
+				</div>
+				
+				<div class="item-left item-padding-bottom-15">
+					<div id="eventHeaderDate" class="image-text-control item-padding-left-40 event-icon-date">Mar 25, 2013 - not specified</div>
+				</div>
+				
+				<div class="item-left item-padding-bottom-15">
+					<div id="eventHeaderAddress" class="image-text-control item-padding-left-40 event-icon-address">At Wynn Theater, 3131 Los Vegas Blvd. South</div>
+				</div>
+				
+				<div class="item-left item-padding-bottom-15">
+					<div id="eventHeaderProfile" class="image-text-control item-padding-left-40 event-icon-profile">Mike Peterson</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+	
+	<div id="pageBody" class="item-left item-padding-bottom-15">
+		
+		<div class="tab-container">
+			<div class="tab-container-left">
+				<div><span>&nbsp;</span></div>
+				
+				<div class="tab-container-left-left">
+					<span>&nbsp;</span>
+				</div>
+				<div class="tab-container-left-right">
+					<div class="tab-container">
+						<div class="tabbable tabs-left">
+							<ul class="nav nav-tabs">
+								<li class="active" id="eventDetail"><a href="#" data-toggle="tab">Event Details</a></li>
+								<li id="eventVirtualBoxOffice"><a href="#" data-toggle="tab">Virtual BoxOffice</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="tab-container">
+						<div class="tab-container-left-right-left">
+							<span>&nbsp;</span>
+						</div>
+						<div class="tab-container-left-right-right">
+							<div class="tabbable tabs-left">
+								<ul class="nav nav-tabs">
+									<li id="eventTicketTypes"><a href="#" data-toggle="tab">Ticket Types</a></li>
+									<li id="eventSalePeriodA"><a href="#" data-toggle="tab">Sale Periods</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="tab-container-right">
+				<div class="tab-content">
+					
+					<!-- Place holder for navigator bar menu click to load and store for different html file -->
+					<div id="eventsLoadingContainer">
+						<!-- Load by JS -->
+						
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	<div id="pageFooter" class="item-left">
+		
+		<!-- Pop up Block -->
+		<div id="eventPopupContainer">
+		
+			<!-- View Venue Detail Popup -->
+			<div id="viewVenueDetailsDialog" class="modal hide fade model-view-venue">
+				<div class="modal-header">
+					<h3 id="myModalLabel">#110x Venue Details</h3>
+				</div>
+				<div class="modal-body">
+					
+					<div class="popup-box">
+						<div id="popupTop" class="popup-top">
+							<div class="popup-title">
+								<strong>Venue Details</strong>
+								<button type="button" class="close" data-dismiss="modal">x</button>
+							</div>
+						</div>
+						
+						<div id="popupContent" class="item-left item-padding-left-10">
+							<div class="venue-dialog-top-left">
+								<div class="popup-item">
+									<img id="venue_logoUrl" alt="VENUE LOGO" src="">
+								</div>
+								
+								<div class="popup-item">
+									<span id="venue_name">Wynn Theater</span>
+								</div>
+								
+								<div class="popup-item">
+									<span id="venue_address">3131 Las Vegas Blvd. South Las Vegas, VN 89109</span>
+								</div>
+								
+								<div class="popup-item">
+									<strong>CITY AREA</strong>
+									<span id="venue_cityArea">The Strip</span>
+								</div>
+								
+								<div class="popup-item">
+									<strong>PHONE</strong>
+									<span id="venue_phoneNumber">(888) 320-7110, (702) 770-9966</span>
+								</div>
+								
+								<div class="popup-item">
+									<strong>EMAIL</strong>
+									<span id="venue_email">-</span>
+								</div>
+							</div>
+							<div class="venue-dialog-top-right">
+								<div id="event_venueLocation" class="venue-dialog-location">
+									<div class="item-padding-5">
+										<div class="simple-box-title simple-box-venue-location">
+											<span>LOCATION</span>
+										</div>
+										
+										<div class="popup-custom-box-content">
+											<!-- google map view -->
+											<div class="gllpLatlonPicker" id="custom_id">
+												<div style="height: 300px" class="gllpMap" id="gllpMap">Google Maps</div>
+												<input type="hidden" class="gllpLatitude" value="60"/>
+												<input type="hidden" class="gllpLongitude" value="30"/>
+												<input type="hidden" class="gllpZoom" value="12"/>
+											</div>
+											<input type="hidden" id="venue_coordinateLatitude" name="venue_coordinateLatitude" />
+											<input type="hidden" id="venue_coordinateLongitude" name="venue_coordinateLongitude" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div id="popupBottom" class="item-left item-padding-left-10">
+							<div class="popup-item">
+								<strong>WEB</strong>
+								<span id="venue_webUrl">http"//www.wynnlasgegas.com/</span>
+							</div>
+							
+							<div class="popup-item">
+								<strong>OPENING HOURS</strong>
+								<span id="venue_openingHours">Mon-Fri 9 a.m. to 9 p.m, Sat-Sum 11 a.m. to 9 p.m.</span>
+							</div>
+							
+							<div class="popup-item">
+								<strong>DESCRIPTION</strong>
+								<span id="venue_description">Lorem ipsum dolor sit amet, consectetur</span>
+							</div>
+							
+							<div class="popup-item">
+								<img id="venue_imageUrls" alt="VENUE PHOTO" src="">
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div>
+			
+			<!-- Select another Venue popup -->
+			<div id="selectAnotherVenueDialog" class="modal hide fade model-another-venue">
+				<div class="modal-header">
+					<h3 id="myModalLabel">#110y Select Venue</h3>
+				</div>
+				<div class="modal-body modal-y-scroll">
+					
+					<div class="popup-box">
+						<div id="popupTop" class="popup-top">
+							<div class="popup-title">
+								<strong>Select a Venue</strong>
+								<button type="button" class="close" data-dismiss="modal">x</button>
+							</div>
+						</div>
+						
+						<div id="venueDialogSearch" class="popup-item">
+							<div class="venue-dialog-az-left">
+								<div id="pagingAzContainer">
+									<ul>
+										<li id="#"><a href="#">#</a></li>
+										<li id="a"><a href="#">A</a></li>
+										<li id="b"><a href="#">B</a></li>
+										<li id="c"><a href="#">C</a></li>
+										<li id="d"><a href="#">D</a></li>
+										<li id="e"><a href="#">E</a></li>
+										<li id="f"><a href="#">F</a></li>
+										<li id="g"><a href="#">G</a></li>
+										<li id="h"><a href="#">H</a></li>
+										<li id="i"><a href="#">I</a></li>
+										<li id="j"><a href="#">J</a></li>
+										<li id="k"><a href="#">K</a></li>
+										<li id="l"><a href="#">L</a></li>
+										<li id="m"><a href="#">M</a></li>
+										<li id="n"><a href="#">N</a></li>
+										<li id="o"><a href="#">O</a></li>
+										<li id="p"><a href="#">P</a></li>
+										<li id="q"><a href="#">Q</a></li>
+										<li id="r"><a href="#">R</a></li>
+										<li id="s"><a href="#">S</a></li>
+										<li id="t"><a href="#">T</a></li>
+										<li id="u"><a href="#">U</a></li>
+										<li id="v"><a href="#">V</a></li>
+										<li id="w"><a href="#">W</a></li>
+										<li id="x"><a href="#">X</a></li>
+										<li id="y"><a href="#">Y</a></li>
+										<li id="z"><a href="#">Z</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="button-align-right">
+								<button class="simple-button" id="createNewVenue">Create New Venue</button>
+							</div>
+						</div>
+						
+						<div id="venueDialogList" class="popup-item">
+							<!-- [List selector] -->
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div>
+			
+			<!-- Create/Edit Ticket Types (Popup) -->
+			<div id="createEditTicketDialog" class="modal hide fade model-width-650">
+				<div class="modal-header">
+					<h3 id="myModalLabel">#130x Create/Edit Ticket Types</h3>
+				</div>
+				<div class="modal-body modal-y-scroll">
+					
+					<div class="popup-box">
+						<div id="popupTop" class="popup-top">
+							<div class="popup-title">
+								<strong>New Ticket Type/Edit Ticket Type</strong>
+								<button type="button" class="close" data-dismiss="modal">x</button>
+							</div>
+						</div>
+						
+						<div id="popupContent" class="item-left item-padding-left-10">
+							<div class="popup-item popup-input">
+								<label for="ticket_ticketLabel">TICKET LABEL</label>
+								<input type="text" id="ticket_ticketLabel" name="ticket_ticketLabel" />
+							</div>
+							
+							<div class="popup-item popup-specific-item item-padding-bottom-15">
+								<label for="ticket_description">DESCRIPTION</label>
+								<textarea id="ticket_description">Ticket...</textarea>
+							</div>
+							
+							<div class="popup-item">
+								<!--
+								<div class="popup-custom-box">
+									<div class="simple-box-title simple-box-price">
+										<span>PRICE</span>
+									</div>
+									
+									<div class="popup-custom-box-content">
+										
+										<div class="popup-price-item">
+											<label for="ticket_retail">RETAIL</label>
+											<input type="text" id="ticket_retail" name="ticket_retail" />
+										</div>
+										
+										<div class="popup-price-item">
+											<label for="ticket_wholeSale">WHOLESALE</label>
+											<input type="text" id="ticket_wholeSale" name="ticket_wholeSale" />
+										</div>
+										
+										<div class="popup-price-item">
+											<label for="ticket_fees">FEES</label>
+											<input type="text" id="ticket_fees" name="ticket_fees" />
+										</div>
+										
+									</div>
+								</div>
+								-->
+								
+								<label for="ticket_price">PRICE</label>
+								<div id="ticket_price" class="popup-custom-box">
+									<div class="popup-price-item">
+										<label for="ticket_retail">RETAIL</label>
+										<input type="text" id="ticket_retail" name="ticket_retail" />
+									</div>
+									
+									<div class="popup-price-item">
+										<label for="ticket_wholeSale">WHOLESALE</label>
+										<input type="text" id="ticket_wholeSale" name="ticket_wholeSale" />
+									</div>
+									
+									<div class="popup-price-item">
+										<label for="ticket_fees">FEES</label>
+										<input type="text" id="ticket_fees" name="ticket_fees" />
+									</div>
+								</div>
+								
+							</div>
+							
+							<div class="popup-item popup-short-input">
+								<label for="ticket_allotment">ALLOTMENT</label>
+								<input type="text" id="ticket_allotment" name="ticket_allotment" />
+								<span>tickets/day</span>
+							</div>
+							
+							<div class="popup-item popup-short-input">
+								<label for="ticket_max">MAX</label>
+								<input type="text" id="ticket_max" name="ticket_max" />
+								<span>tickets/buy</span>
+							</div>
+						</div>
+						
+						<div id="popupBottom" class="item-left container-line-top">
+							<div class="button-align-center item-margin-top-8">
+								<button class="simple-button" id="createEditTicketCancel">Cancel</button>
+								<button class="simple-button" id="createEditTicketSavePublish">Save &amp; Publish</button>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div>
+			
+			<!-- Create/Edit Deal (Popup) -->
+			<div id="createEditDealDialog" class="modal hide fade model-width-650">
+				<div class="modal-header">
+					<h3 id="myModalLabel">#130y Create/Edit Deal</h3>
+				</div>
+				<div class="modal-body modal-y-scroll">
+					
+					<div class="popup-box">
+						<div id="popupTop" class="popup-top">
+							<div class="popup-title">
+								<strong>New Deal/Edit Deal</strong>
+								<button type="button" class="close" data-dismiss="modal">x</button>
+							</div>
+						</div>
+						
+						<div id="popupContent" class="item-left item-padding-left-10">
+							<div class="popup-item popup-specific-item">
+								<label for="deal_basedOnTicketType">BASED ON TICKET TYPE</label>
+								<select id="deal_basedOnTicketType">
+									<option value="-">Select</option>
+									<option>Splash Zone Rows A &amp; B, $214.50</option>
+								</select>
+							</div>
+									
+							<div class="popup-item popup-input">
+								<label for="deal_label">DEAL LABEL</label>
+								<input type="text" id="deal_label" name="deal_label" />
+							</div>
+							
+							<div class="popup-item popup-specific-item item-padding-bottom-15">
+								<label for="deal_description">DESCRIPTION</label>
+								<textarea id="deal_description">Deal...</textarea>
+							</div>
+							
+							<div class="popup-item">
+								<div class="popup-custom-box">
+									<div class="simple-box-title simple-box-deal-price">
+										<span>PRICE</span>
+									</div>
+									
+									<div class="popup-custom-box-content">
+										
+										<div class="popup-price-item">
+											<label for="deal_deal">DEAL</label>
+											<input type="text" id="deal_deal" name="deal_deal" />
+										</div>
+										
+										<div class="popup-price-item">
+											<label for="deal_standard">STANDARD</label>
+											<input type="text" id="deal_standard" name="deal_standard" />
+										</div>
+										
+										<div class="popup-price-item">
+											<label for="deal_wholeSale">WHOLESALE</label>
+											<input type="text" id="deal_wholeSale" name="deal_wholeSale" />
+										</div>
+										
+										<div class="popup-price-item">
+											<label for="deal_fees">FEES</label>
+											<input type="text" id="deal_fees" name="deal_fees" />
+										</div>
+										
+									</div>
+								</div>
+								 
+								
+								<label for="deal_price">PRICE</label>
+								<div id="deal_price" class="popup-custom-box">
+									<div class="popup-price-item">
+										<label for="deal_deal">DEAL</label>
+										<input type="text" id="deal_deal" name="deal_deal" />
+									</div>
+									
+									<div class="popup-price-item">
+										<label for="deal_standard">STANDARD</label>
+										<input type="text" id="deal_standard" name="deal_standard" />
+									</div>
+									
+									<div class="popup-price-item">
+										<label for="deal_wholeSale">WHOLESALE</label>
+										<input type="text" id="deal_wholeSale" name="deal_wholeSale" />
+									</div>
+									
+									<div class="popup-price-item">
+										<label for="deal_fees">FEES</label>
+										<input type="text" id="deal_fees" name="deal_fees" />
+									</div>
+								</div>
+								
+							</div>
+							
+							<div class="popup-item popup-short-input">
+								<label for="deal_allotment">ALLOTMENT</label>
+								<input type="text" id="deal_allotment" name="deal_allotment" />
+								<span>tickets/day</span>
+							</div>
+							
+							<div class="popup-item popup-short-input">
+								<label for="deal_max">MAX</label>
+								<input type="text" id="deal_max" name="deal_max" />
+								<span>tickets/buy</span>
+							</div>
+						</div>
+						
+						<div id="popupBottom" class="item-left container-line-top">
+							<div class="button-align-center item-margin-top-8">
+								<button class="simple-button" id="createEditDealCancel">Cancel</button>
+								<button class="simple-button" id="createEditDealSavePublish">Save &amp; Publish</button>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="modal-footer">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+		$(function() {
+			var eventMenu = new EventMenuController();
+			eventMenu.init();
+			
+			
+		});
+		
+	</script>
+</div>

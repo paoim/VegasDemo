@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="login-bg">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Vegas Backoffice Demo - Sign in</title>
+	<link rel='stylesheet' type="text/css" href='css/bootstrap/bootstrap.min.css' />
+	<link rel='stylesheet' type="text/css" href='css/bootstrap/bootstrap-overrides.css' />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/elements.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap/signin.css" media="screen" />
+</head>
+<body>
+	<div class="login-wrapper">
+		<a href="index.html">
+			<img class="logo" src="css/images/vegas_logo.png">
+		</a>
+		
+		<div class="box">
+			<div class="content-wrap">
+				<h6>Log in</h6>
+				<input id="email" class="form-control" type="text" placeholder="E-mail address" required />
+				<input id="password" class="form-control" type="password" placeholder="Your password" required />
+				<span class="error-star"></span>
+				<a href="#" class="forgot">Forgot password?</a>
+				<div class="remember">
+					<input id="remember-me" type="checkbox">
+					<label for="remember-me">Remember me</label>
+				</div>
+				<a class="btn-glow primary login">Log in</a>
+			</div>
+		</div>
+		
+		<div class="no-account">
+			<p>Don't have an account?</p>
+			<a href="signup.html">Sign up</a>
+		</div>
+	</div>
+	
+	<!--  External Library -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<!-- Internal Library -->
+	
+	<!-- Custom JavaScript -->
+	<script type="text/javascript" src="js/vegas/utils/common.js"></script>
+	<script type="text/javascript" src="js/vegas/listener/base.listener.js"></script>
+	<script type="text/javascript" src="js/vegas/backoffice/UserController.js"></script>
+	
+	<script type="text/javascript">
+		//Hidden code
+		<!--
+		$.ajaxSetup( {
+			cache: false,
+			data: null
+		});
+		
+		$(function() {
+			var user = new UserController();
+			user.initSignIn();
+		});
+		-->
+	</script>
+</body>
+</html>

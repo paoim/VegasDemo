@@ -1,0 +1,167 @@
+<div id="eventSalePeriodsContainer">
+	<div id="salePeriodTop" class="event-tab-detail">
+		<div class="event-detail-item">
+			<div>
+				<span class="event-detail-title">Virtual BoxOffice</span>
+			</div>
+			<div>
+				<span class="event-detail-subtitle">Sale Periods (Resident Event)</span>
+			</div>
+		</div>
+		
+		<div class="event-detail-item">
+			<div class="button-align-right">
+				<button class="btn btn-warning" id="salePeriod">Sale Period</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="salePeriodMiddle">
+		<div class="sale-period-line-top">
+			[Sale Period Calendar]
+		</div>
+		
+		<div class="sale-period-line-top">
+			[Sale Period Loading...]
+		</div>
+		
+		<div class="sale-period-line-top">
+			<div>
+				<div class="button-align-right">
+					<span id="salePeriod_upcomingSalePeriod" class="view-upcoming-sale-periods">View upcoming sale periods</span>
+				</div>
+			</div>
+			<div id="salePeriod_upcomingSalePeriodList" style="display:none;">
+				<!-- Load by JS -->
+			</div>
+		</div>
+	</div>
+	
+	<div id="salePeriodBottom" class="sale-period-line-top">
+		<div class="event-tab-detail">
+			<div class="event-detail-item">
+				<div class="item-float-left sale-period-img">
+					<label for="salePeriod_startDate">START DATE</label>
+					<input type="text" id="guiStartDate" name="guiStartDate" placeholder="MMM DD, YYYY"/>
+					<input id="salePeriod_startDate" type="hidden" value="" />
+				</div>
+				
+				<div class="item-float-left sale-period-img">
+					<label for="salePeriod_endDate">END DATE</label>
+					<input type="text" id="guiEndDate" name="guiEndDate" placeholder="MMM DD, YYYY"/>
+					<input id="salePeriod_endDate" type="hidden" value="" />
+				</div>
+			</div>
+			
+			<div class="event-detail-item">
+				<label for="salePeriod_weekdays">WEEKDAYS</label>
+				<div id="salePeriod_weekdays" class="simple-box sale-period-box">
+					<div class="sale-period-padding checkbox-label">
+						<input type="checkbox" id="salePeriod_monday" name="salePeriod_dayOfWeek" />
+						<label for="salePeriod_monday">Monday</label>
+						
+						<input type="checkbox" id="salePeriod_tuesday" name="salePeriod_dayOfWeek" />
+						<label for="salePeriod_tuesday">Tuesday</label>
+						
+						<input type="checkbox" id="salePeriod_wednesday" name="salePeriod_dayOfWeek" />
+						<label for="salePeriod_wednesday">Wednesday</label>
+						
+						<input type="checkbox" id="salePeriod_thursday" name="salePeriod_dayOfWeek" />
+						<label for="salePeriod_thursday">Thursday</label>
+						
+						<input type="checkbox" id="salePeriod_friday" name="salePeriod_dayOfWeek" />
+						<label for="salePeriod_friday">Friday</label>
+						
+						<input type="checkbox" id="salePeriod_saturday" name="salePeriod_dayOfWeek" />
+						<label for="salePeriod_saturday">Saturday</label>
+						
+						<input type="checkbox" id="salePeriod_sunday" name="salePeriod_dayOfWeek" />
+						<label for="salePeriod_sunday">Sunday</label>
+					</div>
+					
+				</div>
+			</div>
+			
+			<div class="event-detail-item">
+				<label for="salePeriod_times">TIMES</label>
+				<div id="salePeriod_times" class="simple-box sale-period-box">
+					<div class="sale-period-padding">
+						<div id="salePeriod_timesTitle">
+							<div class="sale-period-time"><span>EVENT BEGINS</span></div>
+							<div class="sale-period-time"><span>DOORS OPEN</span></div>
+							<div class="sale-period-end-selling"><span>END SELLING TIME</span></div>
+							<div class="sale-period-delete"><span></span></div>
+						</div>
+						
+						<div id="salePeriod_timesItem">
+							<!-- Load by JS -->
+							
+						</div>
+					</div>
+					<div class="item-float-left sale-period-padding">
+						<button class="btn btn-warning" id="salePeriodEventTime">Event Time</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="event-detail-item">
+				<label for="salePeriod_ticket">ASSIGNED TICKET TYPES</label>
+				<div id="salePeriod_ticket" class="simple-box sale-period-box">
+					<div class="sale-period-padding">
+						<div id="salePeriod_ticketTypeTitle">
+							<div class="item-left-80"><span>TICKET TYPE</span></div>
+							<div class="sale-period-delete"><span></span></div>
+						</div>
+						
+						<div id="salePeriod_ticketTypeItem">
+							<!-- Load by JS -->
+							
+						</div>
+					</div>
+					<div class="item-float-left sale-period-padding">
+						<button class="btn btn-warning" id="salePeriodTicketType">Ticket Type</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="event-detail-item">
+				<div class="button-align-right">
+					<button class="btn btn-warning" id="salePeriodResidentDelete">Delete</button>
+					<button class="btn btn-warning" id="salePeriodResidentCancel">Cancel</button>
+					<button class="btn btn-warning" id="salePeriodResidentSavePublish">Save &amp; Publish</button>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+		$(function() {
+// 			$( "#guiStartDate" ).datepicker({
+// 				altField: "#salePeriod_startDate",
+// 				altFormat: "@",
+// 				dateFormat: "MM dd, yy",
+// 				showOn: "button",
+// 				buttonImage: "/css/images/calendar.gif",
+// 				buttonImageOnly: true,
+// 				onSelect:function(){validateDateRang(this)}
+// 			});
+			
+// 			$( "#guiEndDate" ).datepicker({
+// 				altField: "#salePeriod_endDate",
+// 				altFormat: "@",
+// 				dateFormat: "MM dd, yy",
+// 				showOn: "button",
+// 				buttonImage: "/css/images/calendar.gif",
+// 				buttonImageOnly: true,
+// 				onSelect:function(){validateDateRang(this)}
+// 			});
+			
+			var eventSalePeriodA = new EventSalePeriodAController();
+			eventSalePeriodA.init();
+			
+		});
+		
+	</script>
+</div>

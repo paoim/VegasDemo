@@ -1,0 +1,66 @@
+<div id="eventTicketTypesContainer" class="event-tab-detail">
+	<div class="event-detail-item">
+		<div>
+			<span class="event-detail-title">Virtual BoxOffice</span>
+		</div>
+		<div>
+			<span class="event-detail-subtitle">Ticket Types</span>
+		</div>
+	</div>
+	
+	<div class="event-detail-item">
+		<div class="ticket-type-top-left">
+			<label for="startTicketSell">START TICKET SELL</label>
+			<input type="text" id="startTicketSell" name="startTicketSell" />
+			<span>days before event</span>
+		</div>
+		<div class="button-align-right">
+			<button class="btn btn-warning btn-create-new" id="createNewTicketType">Create New Ticket Type</button>
+			<button class="btn btn-warning btn-create-new" id="createNewDeal">Create New Deal</button>
+		</div>
+	</div>
+	
+	<div class="event-detail-item">
+		<div class="ticket-type-items-head">
+			<div class="ticket-type-item-copy">
+				<span>&nbsp;</span>
+			</div>
+			<div class="ticket-type-item-price">
+				<span>PRICE</span>
+			</div>
+			<div class="ticket-type-item-type">
+				<span>TYPE</span>
+			</div>
+			<div class="ticket-type-item-delete">
+				<span>&nbsp;</span>
+			</div>
+		</div>
+		<div id="ticketTypeListItems">
+			
+		</div>
+	</div>
+	
+	<div class="event-detail-item">
+		<div><strong>SEATING MAP</strong></div>
+		<div id="seatingMap" class="image-box-dashe">
+			<div id="imageSeatingMap" class="preview-content">
+				Image Preview <br/>
+				choose a file
+				<div class="loading image"></div>
+			</div>
+		</div>
+		<input type="file" id="uploadImageSeatingMap" style="visibility:hidden;"/>
+		<input type="hidden" id="imageSeatingMapUrl" value=""/>
+		<div class="recommended-image">Image size x by y pixels</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+		$(function() {
+			var eventTicketType = new EventTicketTypeController();
+			eventTicketType.init();
+			
+		});
+		
+	</script>
+</div>

@@ -1,0 +1,197 @@
+<div id="eventDetailContainer" class="event-tab-detail">
+	<div class="event-detail-item">
+		<span class="event-detail-title">Event Details</span>
+	</div>
+	
+	<div class="event-detail-item">
+		<div class="event-title-left">
+			<label for="title">EVENT TITLE</label>
+			<input type="text" id="title" class="form-control"/>
+		</div>
+		<div class="featured-event">
+			<input type="checkbox" id="featured" />
+			<label for="featured">Featured event</label>
+		</div>
+	</div>
+	
+	<div class="event-detail-item">
+		<div class="event-category-item">
+			<label for="category">EVENT CATEGORY</label>
+			<select id="category" class="form-control">
+				<option value="-">Select event category</option>
+			</select>
+		</div>
+		
+		<div class="event-category-item">
+			<label for="subCategoryId">SUBCATEGORY</label>
+			<select id="subCategoryId" class="form-control">
+				<option value="-">Select type of show</option>
+				<option>Comedy &amp; Magic</option>
+				<option>Cirque de Soleil</option>
+				<option>Tribute</option>
+				<option>Headlines</option>
+				<option>Concerts &amp; Special Events</option>
+				<option>Adult Review</option>
+			</select>
+		</div>
+		
+		<div class="event-category-item">
+			<label for="eventDuration">EVENT LENGTH</label>
+			<input type="text" id="eventDuration" class="form-control"/>
+			<span>minutes</span>
+		</div>
+	</div>
+	
+	<div class="event-detail-item">
+		<div class="simple-box-title simple-box-event-venue">
+			<span>VENUE</span>
+		</div>
+			
+		<div id="event_venue" class="simple-box event-detail-box">
+			<input type="hidden" id="venueId" />
+			<input type="hidden" id="eventVenue" />
+			
+			<div class="item-left item-padding-left-20">
+				<div class="event-venue-left">
+					<div class="item-padding-bottom-15">
+						<div>
+							<span id="venue_name">Wynn Theater</span>
+						</div>
+						<div>
+							<span id="venue_street">3131 Las Vegas Bld. South</span> <span id="venue_city"></span> <span id="venue_country"></span>
+						</div>
+					</div>
+					
+					<div class="item-padding-bottom-15">
+						<div><strong>PHONE</strong></div>
+						<span id="venue_phoneNumber">(888) 320-7110, (702) 770-9966</span>
+					</div>
+					
+					<div class="item-padding-bottom-15">
+						<a id="venue_detail" href="#">View full venue details</a>
+					</div>
+				</div>
+				
+				<div class="event-venue-right">
+					<div class="btn-venue-padding">
+						<button class="btn btn-warning" id="editVenue">Edit Venue Details</button>
+					</div>
+					<div>
+						<button class="btn btn-warning" id="anotherVenue">Select Another Venue</button>
+					</div>
+				</div>
+				
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="event-detail-item">
+		<label for="description">EVENT DESCRIPTION</label>
+		<textarea id="description">DRAGONE the creator of "O" has redefined the traditional experience with Le Reve</textarea>
+	</div>
+	
+	<div class="event-detail-item">
+		<div class="simple-box-title">
+			<span>IMAGE</span>
+		</div>
+		
+		<div id="event_image" class="simple-box event-detail-box">
+			
+			<div class="item-left item-padding-left-20">
+				<div class="item-left-50 event-detail-padding">
+					<div><strong>Image 1</strong></div>
+					<div id="event_imageHorizontalUrl" class="image-box-dashe">
+						<div id="previewImageHorizontal" class="preview-content">
+							Image Preview <br/>
+							choose a file
+							<div class="loading image"></div>
+						</div>
+					</div>
+					<input type="hidden" id="imageHorizontalUrl" value=""/>
+					<input type="file" id="uploadImageHorizontal" style="visibility:hidden;"/>
+					<div class="recommended-image">Image size x by y pixels</div>
+				</div>
+				
+				<div class="item-right-50 event-detail-padding">
+					<div><strong>Image 2</strong></div>
+					<div id="event_imageVerticalUrl" class="image-box-dashe">
+						<div id="previewImageVertical" class="preview-content">
+							Image Preview <br/>
+							choose a file
+							<div class="loading image"></div>
+						</div>
+					</div>
+					<input type="hidden" id="imageVerticalUrl" value=""/>
+					<input type="file" id="uploadImageVertical" style="visibility:hidden;"/>
+					<div class="recommended-image">Image size x by y pixels</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<div class="event-detail-item">
+		<label for="ageRestriction">AGE RESTRICTIONS</label>
+		<select id="ageRestriction" class="form-control">
+			<option value="0">No minimum age</option>
+			<option value="1">18+</option>
+			<option value="2">21+</option>
+		</select>
+	</div>
+	
+	<div class="event-detail-item">
+		<div class="simple-box-title">
+			<span>REQUIRED ADDITIONAL DETAILS</span>
+		</div> 
+		<div id="event_reuiredAddionalDetail" class="simple-box event-detail-box">
+			<div class="item-left-80 event-detail-padding checkbox-label">
+				<input type="checkbox" name="additionalInfo" id="requiredWeight" /><label for="requiredWeight">Weight</label>
+			</div>
+			<div class="item-left-80 event-detail-padding checkbox-label">
+				<input type="checkbox" name="additionalInfo" id="requiredLocation" /><label for="requiredLocation">Pickup location</label>
+			</div>
+			<div class="item-left-80 event-detail-padding checkbox-label">
+				<input type="checkbox" name="additionalInfo" id="requiredname" /><label for="requiredname">Passenger name</label>
+			</div>
+		</div>
+	</div>
+	
+	<div class="event-detail-item">
+		<label for="Disclamer">DISCLAIMER/ T&amp;C</label>
+		<textarea id="Disclamer" class="form-control"></textarea>
+	</div>
+	
+	<div class="event-detail-item">
+		<label for="website">EVENT WEBSITE</label>
+		<input type="text" id="website" class="form-control"/>
+	</div>
+	
+	<div class="event-detail-item">
+		<label for="yelpId">YELP ID</label>
+		<input type="text" id="yelpId" class="form-control"/>
+	</div>
+	
+	<div class="event-detail-item">
+		<label for="confirmationEmail">BOXOFFICE/VENUE EMAIL</label>
+		<input type="text" id="confirmationEmail" class="form-control"/>
+	</div>
+	
+	<div class="event-detail-item">
+		<div class="button-align-right">
+			<button class="btn btn-warning" id="discardChangeEvent">Discard Changes</button>
+			<button class="btn btn-warning" id="savePublishEvent">Save &amp; Publish</button>
+		</div>
+	</div>
+	
+	
+	<script type="text/javascript">
+		$(function() {
+			var eventDetail = new EventDetailController();
+			eventDetail.init();
+			
+			
+		});
+		
+	</script>
+	
+</div>

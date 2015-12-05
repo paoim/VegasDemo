@@ -1,0 +1,213 @@
+<!-- Templates here-->
+
+
+
+<!-- For Event List Page -->
+<script id="eventListItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="event_list_item_${id}" class="event-list-item" onclick="selectOnEventItem(this, ${callback});">
+		<div class="event-result-name">
+			<div id="event_name_${id}" class="item-left">
+				<div class="image-text-control item-padding-left-30 ${icon}">${name}</div>
+			</div>
+			<div class="item-left item-padding-left-30">${address}</div>
+		</div>
+		
+		<div class="event-result-other">
+			<span>${sold}</span>
+		</div>
+		
+		<div class="event-result-other">
+			<span>${today}</span>
+		</div>
+		
+		<div class="event-result-other">
+			<span>${remaining}</span>
+		</div>
+		
+		<div class="event-result-other">
+			<span>${featured}</span>
+		</div>
+		
+		<div class="event-result-active">
+			<span>${activeDeal}</span>
+		</div>
+	</div>
+</script>
+
+
+<!-- For Events List Pagination -->
+<script id="eventPaginationTemplate" type="text/x-jQuery-tmpl">
+	<ul class="pagination button-align-right">
+		<li id="prev" onclick="selectOnPrev(this, ${callbackprev});">
+			<a href="#">&laquo; Previous</a>
+		</li>
+		<li id="${page1}" class="active" onclick="selectOnPage1(this, ${callbackpage1});">
+			<a href="#">${page1}</a>
+		</li>
+		<li id="${page2}" onclick="selectOnPage2(this, ${callbackpage2});">
+			<a href="#">${page2}</a>
+		</li>
+		<li id="${page3}" onclick="selectOnPage3(this, ${callbackpage3});">
+			<a href="#">${page3}</a>
+		</li>
+		<li id="${page4}" onclick="selectOnPage4(this, ${callbackpage4});">
+			<a href="#">${page4}</a>
+		</li>
+		<li id="${page5}" onclick="selectOnPage5(this, ${callbackpage5});">
+			<a href="#">${page5}</a>
+		</li>
+		<li id="next" onclick="selectOnNext(this, ${callbacknext});">
+			<a href="#">Next &raquo;</a>
+		</li>
+	</ul>
+</script>
+
+
+<!-- For Event Details Page -->
+<script id="selectVenueListTemplate" type="text/x-jQuery-tmpl">
+	<div id="select_venue_${id}" class="venue-list-item" onclick="selectOnVenueItem(this, ${callback});">
+		<div id="venue_${name}">${name}</div>
+		<div>${address}</div>
+	</div>
+</script>
+
+
+<!-- For Event Virtual Box Office -->
+<script id="calendarParentItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="calendar_row_${id}" class="custom-calendar-body">
+		
+	</div>
+</script>
+
+
+<script id="calendarChildItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="calendar_item_${id}" class="calendar-line custom-calendar-body-item custom-calendar-magin" onclick="selectOnCalendarItem(this, ${callback});">
+		<div class="custom-calendar-append ${backgroundCss}">
+			<div class="custom-calendar-body-item">
+				<strong>${label}</strong>
+			</div>
+			<div class="custom-calendar-body-item custom-calendar-body-padding">
+				<span class="${firstCss}"></span>
+				<span class="${secondCss}"></span>
+			</div>
+		</div>
+	</div>
+</script>
+
+
+<script id="soldOutItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="soldout_item_${id}" class="soldout-line">
+		<div class="schedual-soldout-time">
+			<select id="schedual_time">
+				<option value="${soldTimeValue}">${soldTimeLabel}</option>
+			</select>
+		</div>
+		<div class="schedual-soldout-ticket">
+			<select id="schedual_ticketTypes">
+				<option value="${ticketTypesValue}">${ticketTypesLabel}</option>
+			</select>
+		</div>
+		<div class="schedual-soldout-delete">
+			<span class="delete-soldout-item ic-delete" onclick="selectOnDeleteSoldOutTicket(this, ${callback});"></span>
+		</div>
+	</div>
+</script>
+
+
+<script id="cancelledEventItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="cancelledevent_item_${id}" class="soldout-line">
+		<div class="schedual-soldout-time">
+			<select id="schedual_time">
+				<option value="${soldTimeValue}">${soldTimeLabel}</option>
+			</select>
+		</div>
+		<div class="schedual-soldout-delete">
+			<span class="delete-cancelledevent-item ic-delete" onclick="selectOnCancelledEvent(this, ${callback});"></span>
+		</div>
+	</div>
+</script>
+
+
+<!-- For Event Ticket Types Page -->
+<script id="ticketTypesItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="tcikettype_item_${id}" class="ticket-type-items-content">
+		<div class="ticket-type-item-copy">
+			<span class="delete-soldout-item  ic-delete" onclick="selectOnDuplicateTicket(this, ${callbackcopy});"></span>
+		</div>
+		<div class="ticket-type-item-price">
+			<input type="text" id="ticketPrice" name="ticketPrice" value="${price}" readonly>
+		</div>
+		<div class="ticket-type-item-type">
+			<input type="text" id="ticketType" name="ticketType" value="${type}" onclick="selectOnEditTicketLabel(this, ${callbackedit});" readonly>
+			<div>${description}</div>
+		</div>
+		<div class="ticket-type-item-delete">
+			<span class="delete-soldout-item ic-delete" onclick="selectOnDeleteTicket(this, ${callback});"></span>
+		</div>
+	</div>
+</script>
+
+
+<!-- For Event Sale Periods (Resident Event) Page -->
+<script id="salePeriodUpcomingItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="salePeriod_upcoming_item_${id}" class="sale-period-upcoming-line sale-period-upcoming-last">
+		<div class="sale-period-upcoming-left">
+			<span id="salePeriod_upcomingStartDate">${startDate}</span> - <span id="salePeriod_upcomingEndDate">${endDate}</span>
+		</div>
+		<div class="sale-period-delete">
+			<button class="btn btn-warning btn-go-to" id="salePeriodUpcomingGoTo" onclick="selectOnUpcomingGoto(this, ${callback});">Go To</button>
+		</div>
+	</div>
+</script>
+
+
+<script id="salePeriodTimeItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="salePeriod_time_item_${id}" class="sale-period-line-bottom">
+		<div class="sale-period-time">
+			<div class="time-item-left">
+				<input type="text" id="salePeriod_eventBegin" name="salePeriod_eventBegin" value="${eventBegin}">
+			</div>
+			<div class="image-text-control item-padding-left-30 time-item-right ic-watch"><span>&nbsp;</span></div>
+		</div>
+		<div class="sale-period-time">
+			<div class="time-item-left">
+				<input type="text" id="salePeriod_doorOpen" name="salePeriod_doorOpen" value="${doorOpen}">
+			</div>
+			<div class="image-text-control item-padding-left-30 time-item-right ic-watch"><span>&nbsp;</span></div>
+		</div>
+		<div class="sale-period-end-selling">
+			<div class="time-item-left">
+				<input type="text" id="salePeriod_endSelling" name="salePeriod_endSelling" value="${endSellingTime}">
+			</div>
+			<div class="image-text-control item-padding-left-30 time-item-right ic-watch">End Selling time on day of event</div>
+		</div>
+		<div class="sale-period-delete">
+			<button class="btn btn-warning ic-delete" id="salePeriodTimeRemove" onclick="selectOnRemoveTime(this, ${callback});">Remove</button>
+		</div>
+	</div>
+</script>
+
+
+<script id="salePeriodTicketTypeItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="salePeriod_ticketType_item_${id}" class="sale-period-line-bottom">
+		<div class="item-left-80">
+			<select id="salePeriod_ticketType">
+				<option value="${ticketTypeValue}">${ticketTypeLabel}</option>
+			</select>
+		</div>
+		<div class="sale-period-delete">
+			<button class="btn btn-warning ic-delete" id="salePeriodTicketTypeRemove" onclick="selectOnRemoveTicket(this, ${callback});">Remove</button>
+		</div>
+	</div>
+</script>
+
+
+<!-- For Venue List Page -->
+<script id="venueListItemTemplate" type="text/x-jQuery-tmpl">
+	<div id="venue_list_item_${id}" class="venue-list-line" onclick="selectOnVenueItem(this, ${callback});">
+		<div class="item-padding-left-5">
+			<div id="venue_${name}">${name}</div>
+			<div>${address}</div>
+		</div>
+	</div>
+</script>
